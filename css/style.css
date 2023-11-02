@@ -1,0 +1,219 @@
+/* Box Model Hack */
+* {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; /*as you nest boxes inside each other they'll inherit height n width from parent*/
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Gideon Roman", cursive;
+  font-size: 62.5%;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+#container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+  background: url(/images/giorgio-trovato-WyxqQpyFNk8-unsplash.jpg) no-repeat
+    center center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+  background: url(https://ih1.redbubble.net/image.2973721189.2721/flat,750x,075,f-pad,750x1000,f8f8f8.jpg)
+    no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+  background-color: #000000;
+  padding: 5px;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  border-top: 2px solid #85bb65;
+  border-bottom: 2px solid #85bb65;
+}
+
+main {
+  background-color: black;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin: auto;
+  border: 2px solid #85bb65;
+}
+
+footer {
+  background-color: black;
+  padding: 10px;
+  font-size: 1.072rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 2px solid #85bb65;
+  border-bottom: 2px solid #85bb65;
+}
+
+/******************************************
+/* INNER STYLES
+/*******************************************/
+h1 {
+  font-size: 6rem;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #85bb65;
+  -webkit-text-fill-color: #ffffff;
+  font-weight: 400;
+  text-align: center;
+}
+
+button {
+  margin: 1% 45%;
+  background-color: #85bb65;
+  border: 2px solid black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.6rem;
+  width: 10%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.872rem;
+  
+  
+}
+
+
+/******************************************
+/* MEDIA QUERIES
+/*******************************************/
+
+@media only screen and (max-width: 384px) {
+  body {
+    font-size: 50%;
+  }
+
+  header {
+    background: black;
+    padding: 5px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  button {
+    margin: 1% 10%;
+    color: #000000;
+  }
+} 
+
+
+ @media only screen and (max-width: 320px){
+  body {
+    font-size: 50%;
+  }
+
+  header {
+    background: black;
+    padding: 5px;
+  }
+
+  h1 {
+    font-size: 3.6rem;
+  }
+
+  button {
+    margin: 1% 25%;
+    font-size: 1.2rem;
+    width: auto;
+    color: #000000;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+} 
+
+ @media only screen and (max-width: 578px){
+  body {
+    font-size: 55%;
+  }
+
+  header {
+    background: black;
+    padding: 5px;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  button {
+    margin: 3% 10%;
+    color:#000000
+  }
+
+  
+}
