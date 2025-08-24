@@ -126,3 +126,18 @@ function shuffle(array) {
 
   return array;
 }
+
+
+
+function copyright() {
+  const date = document.getElementById("date");
+  const year = new Date();
+
+  if (date) {
+    date.innerHTML = year.getFullYear();
+  }
+}
+
+window.onload = () => {
+  copyright();
+};
